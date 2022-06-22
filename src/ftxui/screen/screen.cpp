@@ -413,7 +413,7 @@ std::string Screen::ToString() {
   for (int y = 0; y < dimy_; ++y) {
     if (y != 0) {
       UpdatePixelStyle(ss, previous_pixel, final_pixel);
-      ss << "\r\n";
+      ss << std::endl;
     }
     bool previous_fullwidth = false;
     for (const auto& pixel : pixels_[y]) {
